@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tareas</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>Estudiante</h1>
+    <nav>
+      <a href="perfil-estudiante.html">👤 Perfil</a>
+      <a href="cursos-estudiante.html">Mis Cursos</a>
+      <a href="tareas-estudiante.html">Tareas</a>
+      <a href="calificaciones-estudiante.html">Calificaciones</a>
+    </nav>
+  </aside>
+
+  <main class="contenido">
+    <h3>Tareas Pendientes</h3>
+    
+    <!-- TAREAS DEL SISTEMA (se cargan automáticamente desde JavaScript) -->
+    <div id="tareas-sistema-container">
+      <!-- Las tareas que el profesor cree aparecerán aquí automáticamente -->
+    </div>
+
+    <!-- TAREAS FIJAS (las originales que ya tenías) -->
+    <!-- Tarea 1 -->
+    <div class="card tarea-card" id="tarea-js">
+      <h4>Proyecto final de JavaScript</h4>
+      <p class="fecha-limite">📅 Fecha límite: 30 de octubre</p>
+      <p class="descripcion-tarea">Desarrolla una aplicación interactiva completando todos los criterios del curso.</p>
+      <div class="acciones-tarea">
+        <button class="btn-realizar" onclick="realizarTarea('js')">✅ Realizar Tarea</button>
+        <button class="btn-rechazar" onclick="rechazarTarea('js')">❌ Rechazar</button>
+      </div>
+    </div>
+
+    <!-- Tarea 2 -->
+    <div class="card tarea-card" id="tarea-python">
+      <h4>Ejercicio de clases en Python</h4>
+      <p class="fecha-limite">📅 Fecha límite: 2 de noviembre</p>
+      <p class="descripcion-tarea">Escribe un programa en Python que utilice clases y herencia para resolver un problema.</p>
+      <div class="acciones-tarea">
+        <button class="btn-realizar" onclick="realizarTarea('python')">✅ Realizar Tarea</button>
+        <button class="btn-rechazar" onclick="rechazarTarea('python')">❌ Rechazar</button>
+      </div>
+    </div>
+
+    <!-- Mensaje cuando no hay tareas -->
+    <div id="sin-tareas" class="card mensaje-sin-tareas oculto">
+      <h4>🎉 No tienes tareas pendientes</h4>
+      <p>Todas las tareas han sido completadas o rechazadas.</p>
+    </div>
+  </main>
+
+  <!-- Incluir el archivo JavaScript -->
+  <script src="tareas-estudiante.js"></script>
+  <!-- INCLUIR EL ARCHIVO auth.js -->
+<script src="auth.js"></script>
+</body>
+</html>

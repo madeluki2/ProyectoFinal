@@ -1,0 +1,208 @@
+/* Estilos específicos para revisar tareas */
+
+.estado-tarea {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.estado-pendiente { 
+  background: #fff3cd; 
+  color: #856404; 
+}
+
+.estado-revisado { 
+  background: #d4edda; 
+  color: #155724; 
+}
+
+.estado-entregado { 
+  background: #d1ecf1; 
+  color: #0c5460; 
+}
+
+.puntaje-input {
+  width: 80px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.comentario-profesor {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  min-height: 60px;
+  font-family: inherit;
+}
+
+.filtros-tareas {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filtro-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filtro-item label {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.filtro-item select,
+.filtro-item input {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabla-tareas {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 15px;
+}
+
+.tabla-tareas th,
+.tabla-tareas td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla-tareas th {
+  background: #f8f9fa;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.tabla-tareas tr:hover {
+  background-color: #f8f9fa;
+}
+
+.acciones-rapidas {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-accion {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: all 0.3s ease;
+}
+
+.btn-revisar { 
+  background: #17a2b8; 
+  color: white; 
+}
+
+.btn-editar { 
+  background: #ffc107; 
+  color: black; 
+}
+
+.btn-descargar { 
+  background: #28a745; 
+  color: white; 
+}
+
+.btn-revisar:hover { 
+  background: #138496; 
+}
+
+.btn-editar:hover { 
+  background: #e0a800; 
+}
+
+.btn-descargar:hover { 
+  background: #218838; 
+}
+
+/* Estadísticas */
+.estadisticas-tareas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.estadistica-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  border-left: 4px solid var(--color-primario, #007bff);
+}
+
+.estadistica-card h4 {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.estadistica-card .numero {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--color-primario, #007bff);
+}
+
+/* Mensaje sin tareas */
+.mensaje-sin-tareas {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.mensaje-sin-tareas h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filtros-tareas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filtro-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .estadisticas-tareas {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .acciones-rapidas {
+    flex-direction: column;
+  }
+  
+  .tabla-tareas {
+    font-size: 0.9em;
+  }
+  
+  .tabla-tareas th,
+  .tabla-tareas td {
+    padding: 8px 6px;
+  }
+}

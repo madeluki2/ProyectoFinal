@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Realizar Tarea - Python</title>
+  <link rel="stylesheet" href="panel.css">
+  <link rel="stylesheet" href="estilos-tareas.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>Estudiante</h1>
+    <nav>
+      <a href="perfil-estudiante.html">👤 Perfil</a>
+      <a href="cursos-estudiante.html">Mis Cursos</a>
+      <a href="tareas-estudiante.html">Tareas</a>
+      <a href="calificaciones-estudiante.html">Calificaciones</a>
+    </nav>
+  </aside>
+
+  <main class="contenido">
+    <h3>Realizar Tarea: Ejercicio de clases en Python</h3>
+    
+    <div class="card">
+      <h4>📋 Descripción de la Tarea</h4>
+      <p><strong>Fecha límite:</strong> 2 de noviembre</p>
+      <p><strong>Curso:</strong> Python Avanzado</p>
+      <p><strong>Instrucciones:</strong> Crea un sistema de gestión de vehículos usando Programación Orientada a Objetos en Python.</p>
+      
+      <div class="requisitos">
+        <h5>📝 Requisitos Técnicos:</h5>
+        <ul>
+          <li>✅ Clase base <code>Vehiculo</code> con atributos comunes</li>
+          <li>✅ Clases derivadas <code>Automovil</code> y <code>Motocicleta</code></li>
+          <li>✅ Herencia y polimorfismo</li>
+          <li>✅ Métodos específicos para cada tipo de vehículo</li>
+          <li>✅ Validación de datos en propiedades</li>
+          <li>✅ Método <code>__str__</code> para representación</li>
+        </ul>
+      </div>
+
+      <div class="ejemplo-codigo">
+        <h5>💡 Ejemplo de Estructura:</h5>
+        <pre><code>class Vehiculo:
+    def __init__(self, marca, modelo, año):
+        self.marca = marca
+        self.modelo = modelo
+        self.año = año
+    
+    def mostrar_info(self):
+        return f"{self.marca} {self.modelo} ({self.año})"
+
+    class Automovil(Vehiculo):
+    def __init__(self, marca, modelo, año, puertas):
+        super().__init__(marca, modelo, año)
+        self.puertas = puertas</code></pre>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>🧪 Casos de Prueba</h4>
+      <p>Tu programa debe poder manejar estos escenarios:</p>
+      <ul>
+        <li>Crear automóvil: Toyota Corolla 2023, 4 puertas</li>
+        <li>Crear motocicleta: Honda CBR 2024, cilindrada 600cc</li>
+        <li>Mostrar información de cada vehículo</li>
+        <li>Calcular costo de mantenimiento según tipo</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>📤 Entregar Tarea</h4>
+      <form id="form-entrega-python">
+        <label for="archivo-python">Subir archivo de código (.py):</label>
+        <input type="file" id="archivo-python" accept=".py,.txt,.zip" required>
+        
+        <label for="enlace-repositorio">Enlace a repositorio (GitHub/GitLab):</label>
+        <input type="url" id="enlace-repositorio" placeholder="https://github.com/tuusuario/proyecto-python">
+        
+        <label for="descripcion-implementacion">Explicación de tu implementación:</label>
+        <textarea id="descripcion-implementacion" rows="5" placeholder="Describe cómo implementaste las clases, herencia y los métodos principales..."></textarea>
+        
+        <label for="dificultades">¿Qué dificultades encontraste?</label>
+        <textarea id="dificultades" rows="3" placeholder="Describe cualquier desafío que hayas enfrentado..."></textarea>
+        
+        <div class="acciones-entrega">
+          <button type="submit" class="btn-entregar">🚀 Entregar Tarea Python</button>
+          <button type="button" class="btn-guardar" onclick="guardarBorradorPython()">💾 Guardar Borrador</button>
+          <button type="button" class="btn-cancelar" onclick="cancelarEntrega()">❌ Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="realizar-tarea-python.js"></script>
+</body>
+</html>

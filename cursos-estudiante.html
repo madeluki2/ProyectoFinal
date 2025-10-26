@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Cursos</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>Estudiante</h1>
+    <nav>
+      <a href="perfil-estudiante.html">👤 Perfil</a>
+      <a href="cursos-estudiante.html">Mis Cursos</a>
+      <a href="tareas-estudiante.html">Tareas</a>
+      <a href="calificaciones-estudiante.html">Calificaciones</a>
+    </nav>
+  </aside>
+
+  <main class="contenido">
+    <h3>Mis Cursos</h3>
+    <div class="grid-cursos">
+      <!-- Curso 1 -->
+      <div class="curso-card">
+        <div class="curso-logo">J5</div>
+        <div class="curso-info">
+          <h4>JavaScript Básico</h4>
+          <div class="progreso"><div class="progreso-barra" style="width: 34%;"></div></div>
+          <div class="curso-detalles">34% completado • 7 tareas • 27 min</div>
+        </div>
+      </div>
+
+      <!-- Curso 2 -->
+      <div class="curso-card">
+        <div class="curso-logo">Py</div>
+        <div class="curso-info">
+          <h4>Python Avanzado</h4>
+          <div class="progreso"><div class="progreso-barra" style="width: 8%;"></div></div>
+          <div class="curso-detalles">8% completado • 2 tareas • 11 min</div>
+        </div>
+      </div>
+
+      <!-- Curso 3 -->
+      <div class="curso-card">
+        <div class="curso-logo">C++</div>
+        <div class="curso-info">
+          <h4>C++ Intermedio</h4>
+          <div class="progreso"><div class="progreso-barra" style="width: 0%;"></div></div>
+          <div class="curso-detalles">0% completado • 0 tareas • 0 min</div>
+        </div>
+      </div>
+
+      <!-- Curso 4 -->
+      <div class="curso-card">
+        <div class="curso-logo">SQL</div>
+        <div class="curso-info">
+          <h4>SQL para BD</h4>
+          <div class="progreso"><div class="progreso-barra" style="width: 0%;"></div></div>
+          <div class="curso-detalles">0% completado • 0 tareas • 0 min</div>
+        </div>
+      </div>
+
+      <!-- Curso recomendado Java Profesional -->
+      <div class="curso-card curso-recomendado">
+        <div class="curso-logo">Jv</div>
+        <div class="curso-info">
+          <h4>Java Professional</h4>
+          <div class="progreso"><div class="progreso-barra" style="width: 0%;"></div></div>
+          <div class="curso-detalles">0% completado • 0 tareas • 0 min</div>
+          <div class="curso-extra-info">
+            <p><strong>Nivel:</strong> Principiante</p>
+            <p><strong>Duración estimada:</strong> 35 min</p>
+          </div>
+          <div class="estado-inscripcion">
+            <button id="btn-inscribir-java" class="inscribirse-btn">Inscribirse</button>
+            <span id="texto-inscrito" class="texto-inscrito oculto">Inscrito ✓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal de confirmación de inscripción -->
+  <div id="modal-inscripcion" class="modal oculto">
+    <div class="modal-contenido">
+      <span class="cerrar" id="cerrar-modal-inscripcion">&times;</span>
+      <div class="confirmacion-inscripcion">
+        <div class="icono-confirmacion">✅</div>
+        <h3>¡Inscripción Exitosa!</h3>
+        <p>Te has inscrito correctamente en el curso:</p>
+        <p class="curso-nombre"><strong>Java Professional</strong></p>
+        <div class="detalles-curso">
+          <p><strong>Nivel:</strong> Principiante</p>
+          <p><strong>Duración:</strong> 35 minutos</p>
+          <p><strong>Acceso:</strong> Inmediato</p>
+        </div>
+        <button id="btn-ir-curso" class="boton-primario">Ir al Curso</button>
+        <button id="btn-seguir-explorando" class="boton-secundario">Seguir Explorando</button>
+      </div>
+    </div>
+  </div>
+<!-- INCLUIR EL ARCHIVO auth.js -->
+<script src="auth.js"></script>
+  <script src="inicio.js"></script>
+</body>
+</html>

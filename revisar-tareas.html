@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Revisar Tareas - Profesor</title>
+  <link rel="stylesheet" href="panel.css">
+  <link rel="stylesheet" href="estilos-revisar-tareas.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>Profesor</h1>
+    <nav>
+      <a href="perfil-profesor.html">👤 Perfil</a>
+      <a href="cursos-profesor.html">Cursos Asignados</a>
+      <a href="tareas-profesor.html">Gestionar Tareas</a>
+      <a href="calificaciones-profesor.html">Calificaciones</a>
+    </nav>
+  </aside>
+
+  <main class="contenido">
+    <div class="header-con-sesion">
+      <h3>📝 Revisar Tareas de Estudiantes</h3>
+      <div class="info-usuario-header">
+        <span id="nombre-profesor"></span>
+        <div class="acciones-sesion">
+          <button class="btn-sesion-pequeno" onclick="cambiarCuenta()">🔄 Cambiar</button>
+          <button class="btn-sesion-pequeno" onclick="cerrarSesion()">🚪 Salir</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estadísticas rápidas -->
+    <div class="estadisticas-tareas">
+      <div class="estadistica-card">
+        <h4>Tareas Pendientes</h4>
+        <div class="numero" id="contador-pendientes">0</div>
+      </div>
+      <div class="estadistica-card">
+        <h4>Por Revisar</h4>
+        <div class="numero" id="contador-revision">0</div>
+      </div>
+      <div class="estadistica-card">
+        <h4>Revisadas Hoy</h4>
+        <div class="numero" id="contador-revisadas">0</div>
+      </div>
+      <div class="estadistica-card">
+        <h4>Promedio General</h4>
+        <div class="numero" id="promedio-general">0.0</div>
+      </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="card">
+      <h4>🔍 Filtros de Búsqueda</h4>
+      <div class="filtros-tareas">
+        <div class="filtro-item">
+          <label>Curso:</label>
+          <select id="filtro-curso">
+            <option value="">Todos los cursos</option>
+            <option value="javascript">JavaScript Básico</option>
+            <option value="python">Python Avanzado</option>
+            <option value="java">Java Professional</option>
+          </select>
+        </div>
+        
+        <div class="filtro-item">
+          <label>Estado:</label>
+          <select id="filtro-estado">
+            <option value="">Todos los estados</option>
+            <option value="pendiente">Pendiente</option>
+            <option value="entregado">Entregado</option>
+            <option value="revisado">Revisado</option>
+          </select>
+        </div>
+        
+        <div class="filtro-item">
+          <label>Fecha:</label>
+          <input type="date" id="filtro-fecha">
+        </div>
+        
+        <button class="btn-crear-tarea" onclick="aplicarFiltros()">Aplicar Filtros</button>
+        <button class="btn-cancelar" onclick="limpiarFiltros()">Limpiar</button>
+      </div>
+    </div>
+
+    <!-- Lista de tareas para revisar -->
+    <div class="card">
+      <h4>📋 Tareas Entregadas por Estudiantes</h4>
+      
+      <table class="tabla-tareas">
+        <thead>
+          <tr>
+            <th>Estudiante</th>
+            <th>Curso</th>
+            <th>Tarea</th>
+            <th>Fecha Entrega</th>
+            <th>Estado</th>
+            <th>Puntaje</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="lista-tareas-revisar">
+          <!-- Las tareas se cargan dinámicamente -->
+        </tbody>
+      </table>
+      
+      <div id="mensaje-sin-tareas" class="mensaje-sin-tareas oculto">
+        <h4>🎉 No hay tareas pendientes</h4>
+        <p>Todas las tareas han sido revisadas.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal para revisar tarea -->
+  <div id="modal-revisar" class="modal oculto">
+    <div class="modal-contenido modal-grande">
+      <span class="cerrar" onclick="cerrarModalRevisar()">&times;</span>
+      <div id="contenido-revision">
+        <!-- Contenido dinámico -->
+      </div>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="revisar-tareas.js"></script>
+</body>
+</html>

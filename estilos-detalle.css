@@ -1,0 +1,25 @@
+.detalle {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.boton-inscribir {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--color-primario, #007bff);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.boton-inscribir:hover {
+  background-color: var(--color-secundario, #0056b3);
+}

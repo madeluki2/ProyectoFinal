@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel del Estudiante</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>Estudiante</h1>
+    <nav>
+      <a href="perfil-estudiante.html">👤 Perfil</a>
+      <a href="cursos-estudiante.html">Mis Cursos</a>
+      <a href="tareas-estudiante.html">Tareas</a>
+      <a href="calificaciones-estudiante.html">Calificaciones</a>
+    </nav>
+    <!-- Información del usuario y controles de sesión -->
+    <div class="user-info">
+      <div class="user-details">
+        <div class="user-name">👤 <span id="nombre-usuario">Cargando...</span></div>
+        <div class="user-email" id="correo-usuario">Cargando...</div>
+        <div class="user-role">ESTUDIANTE</div>
+      </div>
+      <div class="user-actions">
+        <button class="btn-cambiar-cuenta" onclick="cambiarCuenta()">🔄 Cambiar Cuenta</button>
+        <button class="btn-cerrar-sesion" onclick="cerrarSesion()">🚪 Cerrar Sesión</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="contenido">
+    <div class="header-con-sesion">
+      <h3>Panel del Estudiante</h3>
+      <div class="info-usuario-header">
+        <div>
+          <strong>👤 <span id="nombre-header">Cargando...</span></strong>
+          <div style="font-size: 0.9em; color: #666;">ESTUDIANTE</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="card">
+      <h4>Mis Cursos</h4>
+      <ul>
+        <li>JavaScript Básico – Lunes y Miércoles 10:00–11:30</li>
+        <li>Python Avanzado – Martes y Jueves 14:00–15:30</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h4>Tareas Pendientes</h4>
+      <ul>
+        <li>Proyecto final de JavaScript – Entrega: 30 de octubre</li>
+        <li>Ejercicio de clases en Python – Entrega: 2 de noviembre</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h4>Calificaciones</h4>
+      <ul>
+        <li>JavaScript Básico: 9.2</li>
+        <li>Python Avanzado: 8.5</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h4>Mi Perfil</h4>
+      <p><strong>Nombre:</strong> <span id="perfil-nombre">Cargando...</span></p>
+      <p><strong>Correo:</strong> <span id="perfil-correo">Cargando...</span></p>
+      <p><strong>Rol:</strong> <span id="perfil-rol">Estudiante</span></p>
+    </section>
+
+    <p><strong>Curso seleccionado:</strong> <span id="curso">—</span></p>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="funciones-panel.js"></script>
+</body>
+</html>

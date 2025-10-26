@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calificaciones</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>Profesor</h1>
+    <nav>
+      <a href="perfil-profesor.html">👤 Perfil</a>
+      <a href="cursos-profesor.html">Cursos Asignados</a>
+      <a href="tareas-profesor.html">Gestionar Tareas</a>
+      <a href="calificaciones-profesor.html">Calificaciones</a>
+    </nav>
+  </aside>
+
+  <main class="contenido">
+    <h3>Calificaciones</h3>
+
+    <section class="card curso-item" onclick="toggleDetalle('js')">
+      <h4>JavaScript Básico <span style="float:right; color: var(--color-primario);">9.2</span></h4>
+      <div id="js" class="calificaciones-detalle subcard">
+        <ul>
+          <li><strong>P1 - Actuación:</strong> 9.0</li>
+          <li><strong>P1 - Producción:</strong> 9.3</li>
+          <li><strong>P2 - Evaluación Final:</strong> 9.2</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card curso-item" onclick="toggleDetalle('py')">
+      <h4>Python Avanzado <span style="float:right; color: var(--color-primario);">8.5</span></h4>
+      <div id="py" class="calificaciones-detalle subcard">
+        <ul>
+          <li><strong>P1 - Actuación:</strong> 8.4</li>
+          <li><strong>P1 - Producción:</strong> 8.6</li>
+          <li><strong>P2 - Evaluación Final:</strong> 8.5</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="funciones-calificaciones.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

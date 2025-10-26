@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Tareas - Profesor</title>
+  <link rel="stylesheet" href="panel.css">
+  <link rel="stylesheet" href="estilos-tareas-profesor.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>Profesor</h1>
+    <nav>
+      <a href="perfil-profesor.html">👤 Perfil</a>
+      <a href="cursos-profesor.html">Cursos Asignados</a>
+      <a href="tareas-profesor.html" class="active">Gestionar Tareas</a>
+      <a href="calificaciones-profesor.html">Calificaciones</a>
+    </nav>
+  </aside>
+
+  <main class="contenido">
+    <div class="header-tareas">
+      <h3>Gestión de Tareas</h3>
+      <button class="btn-crear-tarea" onclick="mostrarModalCrearTarea()">➕ Crear Nueva Tarea</button>
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="estadisticas-tareas">
+      <div class="estadistica-card">
+        <h4>📚 Total Tareas</h4>
+        <span class="numero" id="total-tareas">0</span>
+      </div>
+      <div class="estadistica-card">
+        <h4>⏰ Activas</h4>
+        <span class="numero" id="tareas-activas">0</span>
+      </div>
+      <div class="estadistica-card">
+        <h4>📤 Entregas Pendientes</h4>
+        <span class="numero" id="entregas-pendientes">0</span>
+      </div>
+      <div class="estadistica-card">
+        <h4>✅ Revisadas</h4>
+        <span class="numero" id="tareas-revisadas">0</span>
+      </div>
+    </div>
+
+    <!-- Lista de Tareas Creadas -->
+    <div class="card">
+      <h4>📋 Mis Tareas Creadas</h4>
+      <div id="lista-tareas-profesor">
+        <!-- Las tareas se cargarán aquí dinámicamente -->
+        <div class="mensaje-sin-tareas">
+          <p>📝 Aún no has creado ninguna tarea.</p>
+          <p>¡Usa el botón "Crear Nueva Tarea" para comenzar!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tareas Pendientes de Revisión -->
+    <div class="card">
+      <h4>📝 Tareas para Revisar</h4>
+      <div id="tareas-pendientes-revision">
+        <!-- Las entregas de estudiantes se cargarán aquí -->
+        <div class="mensaje-sin-entregas">
+          <p>🎉 No hay entregas pendientes de revisión.</p>
+          <button class="btn-ver-entregas-grande" onclick="irARevisarTareas()">Ir a Revisar Tareas</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal para Crear Tarea -->
+  <div id="modal-crear-tarea" class="modal oculto">
+    <div class="modal-contenido modal-grande">
+      <span class="cerrar" onclick="cerrarModalCrearTarea()">&times;</span>
+      <h3>➕ Crear Nueva Tarea</h3>
+      
+      <form id="form-crear-tarea">
+        <div class="form-group">
+          <label for="titulo-tarea">Título de la Tarea:</label>
+          <input type="text" id="titulo-tarea" required placeholder="Ej: Proyecto Final de JavaScript">
+        </div>
+
+        <div class="form-group">
+          <label for="curso-tarea">Curso:</label>
+          <select id="curso-tarea" required>
+            <option value="">Seleccionar curso</option>
+            <option value="javascript">JavaScript Básico</option>
+            <option value="python">Python Avanzado</option>
+            <option value="cpp">C++ Intermedio</option>
+            <option value="java">Java Professional</option>
+            <option value="sql">SQL para BD</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha-limite">Fecha Límite:</label>
+          <input type="date" id="fecha-limite" required>
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion-tarea">Descripción Detallada:</label>
+          <textarea id="descripcion-tarea" rows="4" required placeholder="Describe los objetivos, requisitos y expectativas de la tarea..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="requisitos-tarea">Requisitos Técnicos (uno por línea):</label>
+          <textarea id="requisitos-tarea" rows="3" placeholder="✅ Crear una función principal
+✅ Implementar validación de datos
+✅ Usar buenas prácticas de código"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="tipo-entrega">Tipo de Entrega:</label>
+          <select id="tipo-entrega">
+            <option value="archivo">Subir archivo</option>
+            <option value="enlace">Enlace externo</option>
+            <option value="texto">Texto/Descripción</option>
+            <option value="mixto">Mixto</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="puntaje-maximo">Puntaje Máximo:</label>
+          <input type="number" id="puntaje-maximo" min="1" max="100" value="100" required>
+        </div>
+
+        <div class="acciones-formulario">
+          <button type="submit" class="btn-crear">🚀 Crear Tarea</button>
+          <button type="button" class="btn-cancelar" onclick="cerrarModalCrearTarea()">❌ Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="tareas-profesor.js"></script>
+</body>
+</html>

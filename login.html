@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-box">
+    <h2>Iniciar sesión</h2>
+    <form id="form-login">
+      <label for="usuario">Usuario o Correo electrónico:</label>
+      <input type="text" id="usuario" name="usuario" required placeholder="usuario o ejemplo@gmail.com">
+      <div id="error-usuario" class="mensaje-error"></div>
+
+      <label for="clave">Contraseña:</label>
+      <input type="password" id="clave" name="clave" required placeholder="Mínimo 10 caracteres">
+      <div id="error-clave" class="mensaje-error"></div>
+      
+      <!-- Indicador de seguridad de contraseña -->
+      <div class="seguridad-contraseña">
+        <div class="nivel-seguridad" id="nivel-seguridad">
+          <div class="barra-seguridad" id="barra-seguridad"></div>
+        </div>
+        <span id="texto-seguridad">Seguridad: Muy débil</span>
+      </div>
+
+      <label for="rol">Rol:</label>
+      <select id="rol" name="rol" required>
+        <option value="">Selecciona tu rol</option>
+        <option value="estudiante">Estudiante</option>
+        <option value="profesor">Profesor</option>
+      </select>
+      <div id="error-rol" class="mensaje-error"></div>
+
+      <button type="submit">Entrar</button>
+    </form>
+
+    <div class="mensaje">
+      ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
