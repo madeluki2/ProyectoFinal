@@ -6,7 +6,7 @@ import Index from "../views/index.vue";
 import Login from "../views/login.vue";
 
 import Registro from "../views/registro.vue";
-import Course from "../views/Course.vue";
+import Course from "../views/course.vue";
 
 // Paneles
 import PanelEstudiante from "../views/panel-estudiante.vue";
