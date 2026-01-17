@@ -1,0 +1,266 @@
+/* Estilos específicos para la interfaz del profesor */
+.interfaz-profesor {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-block-size: 100vh;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-profesor {
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  block-size: 100vh;
+  position: fixed;
+  inline-size: 250px;
+}
+
+.sidebar-profesor h1 {
+  font-size: 1.5em;
+  margin-block-end: 30px;
+  border-block-end: 2px solid #34495e;
+  padding-block-end: 10px;
+  text-align: center;
+}
+
+.nav-profesor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-profesor a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-size: 0.95em;
+}
+
+.nav-profesor a:hover {
+  background: #34495e;
+}
+
+.user-info-profesor {
+  margin-block-start: 40px;
+  padding: 15px;
+  background: #34495e;
+  border-radius: 8px;
+}
+
+.user-details-profesor {
+  margin-block-end: 15px;
+}
+
+.user-name-profesor {
+  font-weight: bold;
+  font-size: 1em;
+  margin-block-end: 5px;
+}
+
+.user-email-profesor {
+  font-size: 0.85em;
+  color: #bdc3c7;
+  margin-block-end: 8px;
+}
+
+.user-role-profesor {
+  background: #e74c3c;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.75em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.user-actions-profesor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-cambiar-cuenta, .btn-cerrar-sesion {
+  background: transparent;
+  border: 1px solid #7f8c8d;
+  color: #ecf0f1;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.8em;
+}
+
+.btn-cambiar-cuenta:hover, .btn-cerrar-sesion:hover {
+  background: #7f8c8d;
+}
+
+.contenido-principal {
+  padding: 30px;
+  background: #ecf0f1;
+  margin-inline-start: 250px;
+  min-block-size: 100vh;
+}
+
+.header-principal {
+  margin-block-end: 25px;
+  padding-block-end: 15px;
+  border-block-end: 2px solid #bdc3c7;
+}
+
+.header-principal h2 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.seccion-tareas {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.seccion-tareas h3 {
+  color: #2c3e50;
+  margin-block-end: 20px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.tarea-item {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 20px;
+  margin-block-end: 25px;
+}
+
+.tarea-header {
+  margin-block-end: 15px;
+}
+
+.tarea-titulo {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.tarea-info {
+  display: grid;
+  gap: 8px;
+  margin-block-end: 15px;
+  font-size: 0.9em;
+}
+
+.tarea-descripcion {
+  color: #555;
+  line-height: 1.4;
+  margin-block-end: 15px;
+  padding: 10px;
+  background: white;
+  border-radius: 4px;
+  border-inline-start: 3px solid #3498db;
+  font-size: 0.9em;
+}
+
+/* Tabla de botones */
+.tabla-acciones {
+  margin: 15px 0;
+}
+
+.tabla-botones {
+  inline-size: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-botones td {
+  padding: 5px;
+  text-align: center;
+}
+
+.btn-tabla {
+  inline-size: 100%;
+  padding: 8px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+
+.btn-ver { background: #3498db; color: white; }
+.btn-editar { background: #27ae60; color: white; }
+.btn-eliminar { background: #e74c3c; color: white; }
+.btn-duplicar { background: #95a5a6; color: white; }
+
+.btn-ver:hover { background: #2980b9; }
+.btn-editar:hover { background: #229954; }
+.btn-eliminar:hover { background: #c0392b; }
+.btn-duplicar:hover { background: #7f8c8d; }
+
+/* Tabla de información final */
+.info-final {
+  margin-block-start: 10px;
+}
+
+.tabla-info {
+  inline-size: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-info td {
+  padding: 8px 5px;
+  border: none;
+}
+
+.curso-info {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 0.85em;
+  text-align: start;
+}
+
+.estado-info {
+  background: #27ae60;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+  inline-size: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .interfaz-profesor {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar-profesor {
+    display: none;
+  }
+  
+  .contenido-principal {
+    margin-inline-start: 0;
+    padding: 15px;
+  }
+  
+  .tabla-botones {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .btn-tabla {
+    font-size: 0.8em;
+    padding: 6px 3px;
+  }
+}

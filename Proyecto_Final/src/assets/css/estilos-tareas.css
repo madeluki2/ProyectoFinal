@@ -1,0 +1,131 @@
+/* Estilos específicos para realizar tareas */
+
+.requisitos {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-inline-start: 4px solid #28a745;
+  margin: 15px 0;
+}
+
+.requisitos h5 {
+  color: #155724;
+  margin-block-end: 10px;
+}
+
+.requisitos ul {
+  margin: 0;
+  padding-inline-start: 20px;
+}
+
+.requisitos li {
+  margin-block-end: 5px;
+}
+
+.ejemplo-codigo {
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  overflow-x: auto;
+}
+
+.ejemplo-codigo h5 {
+  color: #90cdf4;
+  margin-block-end: 10px;
+}
+
+.ejemplo-codigo pre {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.ejemplo-codigo code {
+  color: #cbd5e0;
+  line-height: 1.4;
+}
+
+/* Formulario de entrega */
+.acciones-entrega {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-block-start: 20px;
+}
+
+.btn-entregar, .btn-guardar, .btn-cancelar {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-entregar {
+  background: #28a745;
+  color: white;
+}
+
+.btn-guardar {
+  background: #17a2b8;
+  color: white;
+}
+
+.btn-cancelar {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-entregar:hover {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+.btn-guardar:hover {
+  background: #138496;
+  transform: translateY(-1px);
+}
+
+.btn-cancelar:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+/* Estilos para formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  margin-block-end: 5px;
+}
+
+input[type="file"],
+input[type="url"],
+textarea {
+  padding: 10px 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input[type="file"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primario, #007bff);
+}
+
+textarea {
+  resize: vertical;
+  min-block-size: 80px;
+  font-family: inherit;
+}
